@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>精灵图</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+      ul{
+          width: 330px;
+          height: 195px;
+      }
+      .box{
+          width: 330px;
+          height: 300px;
+          position: relative ;
+          left: 400px;
+          top: 50px;
+      }
+  ul li{
+    list-style: none;
+      float: left;
+      border: 1px black solid;
+      width: 66px;
+      height: 66px;
+      margin-left: -1px;
+      margin-top: -1px;
+  }
+  .box div{
+    background-image: url("img/pcl.png");
+      width: 24px;
+      height: 32px;
+      margin:5px auto;
+}
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li><div></div> <p>充话费</p></li>
+        <li><div></div><p>旅行</p></li>
+        <li><div></div> <p>车险</p></li>
+        <li><div></div> <p>游戏</p></li>
+        <li><div></div><p>彩票</p></li>
+        <li><div></div><p>电影</p></li>
+        <li><div></div><p>酒店</p></li>
+        <li><div></div><p>理财</p></li>
+        <li><div></div> <p>找服务</p></li>
+        <li><div></div> <p>演出</p></li>
+        <li><div></div> <p>水电煤</p></li>
+        <li><div></div><p>火车票</p></li>
+    </ul>
+</div>
+</body>
+<script>
+    var divs = document.querySelectorAll(".box ul li div");
+    for(var i = 0;i<divs.length;i++){
+        divs[i].style.backgroundPositionY = -43*i + 'px';
+    }
+</script>
+</html>

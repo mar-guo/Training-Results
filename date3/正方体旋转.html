@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+           margin: 100px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 99999px;
+            transform: rotateX(20deg) rotateY(20deg);
+animation: lard 5s linear infinite;
+        }
+        .box div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            line-height: 100px;
+            opacity:0.8;
+
+        }
+        .top{
+
+            background:url("img/1.jpg");
+            background-size:100px 100px;
+
+            transform: rotateX(90deg) translateZ(50px) ;
+        }
+        .bottom{
+            background:url("img/2.jpg");
+            background-size:100px 100px;
+            transform: rotateX(-90deg) translateZ(50px) ;
+        }
+        .left{
+            background:url("img/3.jpg");
+            background-size:100px 100px;
+            transform: rotateY(-90deg) translateZ(50px) ;
+        }
+        .right{
+            background:url("img/4.jpg");
+            background-size:100px 100px;
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .front{
+            background:url("img/5.jpg");
+            background-size:100px 100px;
+            transform:translateZ(50px);
+
+        }
+        .black{
+            background:url("img/6.jpg");
+            background-size:100px 100px;
+            transform:translateZ(-50px);
+        }
+        @keyframes lard {
+            0%{
+                transform: rotateX(45deg) rotateY(45deg);
+            }
+            100%{
+                transform: rotate(380deg) rotateY(380deg);
+            }
+        }
+        .box:hover div:nth-of-type(1){
+            transform: rotateX(90deg) translateZ(100px) ;
+        }
+        .box:hover div:nth-of-type(2){
+            transform: rotateX(-90deg) translateZ(100px) ;
+        }
+        .box:hover div:nth-of-type(3){
+            transform: rotateY(-90deg) translateZ(100px) ;
+        }
+        .box:hover div:nth-of-type(4){
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .box:hover div:nth-of-type(5){
+            transform:translateZ(100px);
+        }
+        .box:hover div:nth-of-type(6){
+            transform:translateZ(-100px);
+        }
+        .box2{
+            margin: 100px auto;
+            position: relative;
+            bottom: 175px;
+            width: 50px;
+            height: 50px;
+            transform-style: preserve-3d;
+            perspective: 99999px;
+
+            animation: lard 5s linear infinite;
+        }
+        .box2 div{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            line-height: 50px;
+            opacity:0.5;
+
+        }
+        .top2{
+            background:url("img/7.jpg");
+            background-size:50px 50px;
+            transform: rotateX(90deg) translateZ(25px) ;
+        }
+        .bottom2{
+            background:url("img/8.jpg");
+            background-size:50px 50px;
+            transform: rotateX(-90deg) translateZ(25px) ;
+        }
+        .left2{
+            background:url("img/9.jpg");
+            background-size:50px 50px;
+            transform: rotateY(-90deg) translateZ(25px) ;
+        }
+        .right2{
+            background:url("img/10.jpg");
+            background-size:50px 50px;
+            transform: rotateY(90deg) translateZ(25px);
+        }
+        .front2{
+            background:url("img/11.jpg");
+            background-size:50px 50px;
+            transform:translateZ(25px);
+
+        }
+        .black2{
+            background:url("img/12.jpg");
+            background-size:50px 50px;
+            transform:translateZ(-25px);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+   <div class="top">
+
+   </div>
+    <div class="bottom"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="front"></div>
+    <div class="black"></div>
+</div>
+<div class="box2">
+    <div class="top2"></div>
+    <div class="bottom2"></div>
+    <div class="left2"></div>
+    <div class="right2"></div>
+    <div class="front2"></div>
+    <div class="black2"></div>
+</div>
+</body>
+</html>
